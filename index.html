@@ -1,0 +1,160 @@
+<!DOCTYPE html> <!-- Define el tipo de documento como HTML5. -->
+<html lang="es"> <!-- Inicia el documento HTML y establece el idioma a español. -->
+<head> <!-- Contenedor para metadatos, hojas de estilo y scripts. -->
+    <meta charset="UTF-8"> <!-- Especifica la codificación de caracteres como UTF-8 para soportar caracteres especiales. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para que sea responsiva en dispositivos móviles. -->
+    <title>Control de Mantenimiento</title> <!-- Establece el título que se muestra en la pestaña del navegador. -->
+    <link rel="stylesheet" href="styles.css"> <!-- Enlaza la hoja de estilos local para personalizar la apariencia. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"> <!-- Enlaza la librería de íconos Remixicon. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Enlaza la hoja de estilos de Bootstrap desde un CDN. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Enlaza la librería de íconos Font Awesome. -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css"> <!-- Enlaza los estilos del carrusel Owl Carousel. -->
+
+    <!-- Google tag (gtag.js) para Google Analytics. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9REDB493L"></script> <!-- Carga el script de Google Analytics de forma asíncrona. -->
+    <script> <!-- Bloque de script para configurar Google Analytics. -->
+        window.dataLayer = window.dataLayer || []; // Inicializa la capa de datos si no existe.
+        function gtag() { dataLayer.push(arguments); } // Función para enviar eventos a Google Analytics.
+        gtag('js', new Date()); // Registra una nueva vista de página.
+
+        gtag('config', 'G-D9REDB493L'); // Configura Google Analytics con tu ID de seguimiento.
+    </script> <!-- Fin del script de Google Analytics. -->
+
+</head> <!-- Cierre de la sección de metadatos. -->
+<body> <!-- Contiene todo el contenido visible de la página web. -->
+    
+
+    <header> <!-- Define la sección de la cabecera de la página. -->
+        <nav class="navbar"> <!-- Barra de navegación, estilizada con la clase 'navbar'. -->
+            <div class="container-fluid"> <!-- Contenedor de Bootstrap que ocupa todo el ancho. -->
+                <div class="d-flex align-items-center logo-container"> <!-- Contenedor flexible para alinear el logo y el título. -->
+                    <button class="navbar-toggler" type="button" id="menu-toggle"> <!-- Botón para mostrar/ocultar el menú en dispositivos móviles (menú hamburguesa). -->
+                        &#9776; <!-- Entidad HTML para el ícono de hamburguesa (☰). -->
+                    </button> <!-- Cierre del botón del menú. -->
+                    <a class="logo ms-2" style="text-decoration: none;"> <!-- Enlace para el logo, con estilos en línea para quitar el subrayado. -->
+                        <img src="https://res.cloudinary.com/dalxsbtuo/image/upload/v1758648715/622b775b-33b4-4282-888a-75622238edda_rpqric.png" alt="Logo Hulux" style="height: 40px;"> <!-- Imagen del logo de la empresa. -->
+                    </a> <!-- Cierre del enlace del logo. -->
+                    <div class="logo ms-2"><h3>Control de Mantenimiento y Ciberseguridad Hulux</h3></div> <!-- Título de la aplicación junto al logo. -->
+                </div> <!-- Cierre del contenedor flexible. -->
+                <ul class="nav-links" id="nav-links"> <!-- Lista de enlaces de navegación. -->
+                    <li><a href="index.html">Inicio</a></li> <!-- Enlace a la página de inicio. -->
+                    <li><a href="control_de_mantenimiento.html">Control de Mantenimiento</a></li> <!-- Enlace a la página de control. -->
+                    <li><a href="dashboard.html">Dashboard</a></li> <!-- Enlace al dashboard de estadísticas. -->
+                    <li><a href="login.html" id="logout-button">Cerrar Sesión</a></li> <!-- Enlace para cerrar sesión. -->
+                </ul> <!-- Cierre de la lista de enlaces. -->
+            </div> <!-- Cierre del contenedor de la barra de navegación. -->
+        </nav> <!-- Cierre de la barra de navegación. -->
+    </header> <!-- Cierre de la cabecera. -->
+
+    <script> <!-- Bloque de script para la funcionalidad del menú hamburguesa. -->
+        // JavaScript para abrir/cerrar el menú hamburguesa.
+        document.getElementById("menu-toggle").onclick = function () { // Asigna un evento de clic al botón del menú.
+            document.getElementById("nav-links").classList.toggle("open"); // Añade o quita la clase 'open' a la lista de enlaces para mostrarla u ocultarla.
+        };
+    </script> <!-- Fin del script del menú. -->
+
+
+    <!-- Sección del Carrusel de imágenes. -->
+     <div class="container"> <!-- Contenedor de Bootstrap para centrar y limitar el ancho del carrusel. -->
+        <div class="slider-wrapper"> <!-- Contenedor personalizado para el carrusel. -->
+            <div id="slider-ef" class="slider-images-wrapper owl-carousel"> <!-- Contenedor principal del carrusel, con ID y clases de Owl Carousel. -->
+                <div class="item"> <!-- Primer elemento (slide) del carrusel. -->
+                    <img class="img-responsive" src="https://res.cloudinary.com/dalxsbtuo/image/upload/v1758294943/pexels-anete-lusina-4792719_ci9rw0.jpg" alt="Imagen 1" /> <!-- Imagen del slide. -->
+                </div> <!-- Cierre del primer elemento. -->
+                <div class="item"> <!-- Segundo elemento del carrusel. -->
+                    <img class="img-responsive" src="https://res.cloudinary.com/dalxsbtuo/image/upload/v1758295038/pexels-it-services-eu-9278798-7596370_y8rsf0.jpg" alt="Imagen 2" /> <!-- Imagen del slide. -->
+                </div> <!-- Cierre del segundo elemento. -->
+                <div class="item"> <!-- Tercer elemento del carrusel. -->
+                    <img class="img-responsive" src="https://res.cloudinary.com/dalxsbtuo/image/upload/v1758570048/service-428540_1280_utpzhk.jpg" alt="Imagen 3" /> <!-- Imagen del slide. -->
+                </div> <!-- Cierre del tercer elemento. -->
+                <div class="item"> <!-- Cuarto elemento del carrusel. -->
+                    <img class="img-responsive" src="https://res.cloudinary.com/dalxsbtuo/image/upload/v1758570819/darius-cotoi-4RDfifiRG3M-unsplash_mb33yo.jpg" alt="Imagen 4" /> <!-- Imagen del slide. -->
+                </div> <!-- Cierre del cuarto elemento. -->
+                <div class="item"> <!-- Quinto elemento del carrusel. -->
+                    <img class="img-responsive" src="https://res.cloudinary.com/dalxsbtuo/image/upload/v1758724910/internet-3484137_1280_selsr8.jpg" alt="Imagen 5" /> <!-- Imagen del slide. -->
+                </div> <!-- Cierre del quinto elemento. -->
+                <div class="item"> <!-- Sexto elemento del carrusel. -->
+                    <img class="img-responsive" src="https://res.cloudinary.com/dalxsbtuo/image/upload/v1758725063/cyber-security-3443628_1280_gqvieu.jpg" alt="Imagen 6" /> <!-- Imagen del slide. -->
+                </div> <!-- Cierre del sexto elemento. -->
+                <div class="item"> <!-- Séptimo elemento del carrusel. -->
+                    <img class="img-responsive" src="https://res.cloudinary.com/dalxsbtuo/image/upload/v1758725222/antivirus-9718742_1280_kyifh4.png" alt="Imagen 7" /> <!-- Imagen del slide. -->
+                </div> <!-- Cierre del séptimo elemento. -->
+                <div class="item"> <!-- Octavo elemento del carrusel. -->
+                    <img class="img-responsive" src="https://res.cloudinary.com/dalxsbtuo/image/upload/v1758725457/vpn-4255477_1280_nofyjc.jpg" alt="Imagen 8" /> <!-- Imagen del slide. -->
+                </div> <!-- Cierre del octavo elemento. -->
+            </div> <!-- Cierre del contenedor del carrusel. -->
+        </div> <!-- Cierre del wrapper del carrusel. -->
+    </div> <!-- Cierre del contenedor de Bootstrap. -->
+
+<!-- Sección de productos/servicios. -->
+     <section class="productos"> <!-- Define una sección con la clase 'productos'. -->
+            <h2>Tipos de Mantenimiento</h2> <!-- Título de la sección. -->
+        <div class="container"> <!-- Contenedor de Bootstrap para alinear el contenido. -->
+            <div class="row justify-content-center g-4"> <!-- Fila de Bootstrap que centra sus columnas y añade espaciado (gap). -->
+                <div class="col-md-5"> <!-- Columna que ocupa 5 de 12 espacios en pantallas medianas o más grandes. -->
+                    <a href="preventivo.html" class="product-item product-item-simple" style="text-decoration: none; color: inherit;"> <!-- Enlace a la página de mantenimiento preventivo. -->
+                        <img src="https://res.cloudinary.com/dalxsbtuo/image/upload/v1758296987/Mantenimiento-Preventivo-Correctivo_bzflri.webp" alt="Mantenimiento Preventivo" class="img-fluid product-image"> <!-- Imagen del servicio. -->
+                        <br></br> <!-- Doble salto de línea (se podría mejorar con CSS). -->
+                        <h3>Preventivo</h3> <!-- Título del servicio. -->
+                    </a> <!-- Cierre del enlace. -->
+                </div> <!-- Cierre de la columna. -->
+                <div class="col-md-5"> <!-- Segunda columna para otro servicio. -->
+                    <a href="correctivo.html" class="product-item product-item-simple" style="text-decoration: none; color: inherit;"> <!-- Enlace a la página de mantenimiento correctivo. -->
+                        <img src="https://res.cloudinary.com/dalxsbtuo/image/upload/v1758297433/reparacion-de-computadoras-en-guadalajara-2-640w_cnugqo.jpg" alt="Mantenimiento Correctivo" class="img-fluid product-image"> <!-- Imagen del servicio. -->
+                        <br></br> <!-- Doble salto de línea. -->
+                        <h3>Correctivo </h3> <!-- Título del servicio. -->
+                    </a> <!-- Cierre del enlace. -->
+                </div> <!-- Cierre de la columna. -->
+            <div class="col-md-5"> <!-- Tercera columna para otro servicio. -->
+                    <a href="https://www.canva.com/design/DAGsm_BA6n4/dmmrZpTIAEGZjqeWzT-sYQ/view?utm_content=DAGsm_BA6n4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h01849b39e7" class="product-item product-item-simple" style="text-decoration: none; color: inherit;"> <!-- Enlace a un diseño de Canva. -->
+                        <img src="https://res.cloudinary.com/dalxsbtuo/image/upload/v1758567542/Soporte_Tecnico_hgmmfr.png" alt="Soporte Técnico" class="img-fluid product-image"> <!-- Imagen del servicio. -->
+                        <br></br> <!-- Doble salto de línea. -->
+                        <h3>Soporte Técnico Preventivo y correctivo</h3> <!-- Título del servicio. -->
+                    </a> <!-- Cierre del enlace. -->
+                </div> <!-- Cierre de la columna. -->
+            </section> <!-- Cierre de la sección de mantenimiento. -->
+    <div class="productos"> <!-- Otra sección con la misma clase 'productos'. -->
+        <h2>Ciberseguridad</h2> <!-- Título de la sección. -->
+        <div class="container"> <!-- Contenedor de Bootstrap. -->
+            <div class="row justify-content-center g-4"> <!-- Fila de Bootstrap que centra sus columnas. -->
+                <div class="col-md-5"> <!-- Columna para un servicio de ciberseguridad. -->
+                    <a href="https://www.canva.com/design/DAGsHuezR4s/riGep2UEtAO-We-sB4eYow/view?utm_content=DAGsHuezR4s&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6a785141a2" class="product-item product-item-simple" style="text-decoration: none; color: inherit;"> <!-- Enlace a un diseño de Canva. -->
+                        <img src="https://res.cloudinary.com/dalxsbtuo/image/upload/v1758559576/Ciberseguridad_g7pbsn.png" alt="Ciberseguridad" class="img-fluid product-image"> <!-- Imagen del servicio. -->
+                        <br></br> <!-- Doble salto de línea. -->
+                        <h3>Ciberseguridad</h3> <!-- Título del servicio. -->
+                    </a> <!-- Cierre del enlace. -->
+                </div> <!-- Cierre de la columna. -->
+                <div class="col-md-5"> <!-- Columna para otro servicio de ciberseguridad. -->
+                    <a href="https://www.canva.com/design/DAGsgX_olns/XsAJ-BKib0Tqr4nGELaGcg/view?utm_content=DAGsgX_olns&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hc7a86b4594" class="product-item product-item-simple" style="text-decoration: none; color: inherit;"> <!-- Enlace a un diseño de Canva. -->
+                        <img src="https://res.cloudinary.com/dalxsbtuo/image/upload/v1758559926/Seguridad_en_las_tecnolog%C3%ADas_de_la_informac%C3%ADon_tt8myf.png" alt="Seguridad en TI" class="img-fluid product-image"> <!-- Imagen del servicio. -->
+                        <br></br> <!-- Doble salto de línea. -->
+                        <h3>Seguridad en las Tecnologías de la Información</h3> <!-- Título del servicio. -->
+                    </a> <!-- Cierre del enlace. -->
+                </div> <!-- Cierre de la columna. -->
+            </div> <!-- Cierre de la fila. -->
+        </div> <!-- Cierre del contenedor. -->
+    </div> <!-- Cierre de la sección de ciberseguridad. -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Enlaza la librería jQuery, necesaria para Owl Carousel. -->
+    <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script> <!-- Enlaza el script de Owl Carousel. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> <!-- Enlaza el script de Bootstrap (incluye Popper.js). -->
+    <script> <!-- Bloque de script para inicializar Owl Carousel. -->
+        $(document).ready(function () { // Ejecuta el código cuando el documento está completamente cargado.
+            $('#slider-ef').owlCarousel({ // Selecciona el carrusel por su ID y lo inicializa.
+                loop: true, // El carrusel se repetirá en un bucle infinito.
+                margin: 10, // Espacio de 10px entre los elementos.
+                items: 1, // Muestra un solo elemento a la vez.
+                autoplay: true, // El carrusel se moverá automáticamente.
+                autoplayTimeout: 3000, // Cambia de slide cada 3 segundos (3000 milisegundos).
+                autoplayHoverPause: false // El carrusel no se detendrá al pasar el mouse sobre él.
+            }); // Fin de la configuración de Owl Carousel.
+
+        }); // Fin de la función ready.
+    </script> <!-- Fin del script de inicialización. -->
+    <!-- Pie de página -->
+    <footer> <!-- Define la sección del pie de página. -->
+        <p>2025 Control de Mantenimiento Hulux.</p> <!-- Párrafo con información de copyright. -->
+    </footer> <!-- Cierre del pie de página. -->
+    <script type="module" src="auth.js"></script> <!-- Enlaza el script de autenticación como un módulo JavaScript. -->
+    <script type="module" src="script.js"></script> <!-- Enlaza el script principal como un módulo JavaScript. -->
+</body> <!-- Cierre del cuerpo de la página. -->
+</html> <!-- Cierre del documento HTML. -->
