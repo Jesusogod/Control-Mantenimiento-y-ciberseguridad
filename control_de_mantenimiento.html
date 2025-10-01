@@ -1,0 +1,115 @@
+<!DOCTYPE html> <!-- Define el tipo de documento como HTML5. -->
+<html lang="es"> <!-- Inicia el documento HTML y establece el idioma a español. -->
+<head> <!-- Contenedor para metadatos, hojas de estilo y scripts. -->
+    <meta charset="UTF-8"> <!-- Especifica la codificación de caracteres como UTF-8 para soportar caracteres especiales. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para que sea responsiva en dispositivos móviles. -->
+    <title>Control de Mantenimiento</title> <!-- Establece el título que se muestra en la pestaña del navegador. -->
+    <link rel="stylesheet" href="styles.css"> <!-- Enlaza la hoja de estilos local para personalizar la apariencia. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"> <!-- Enlaza la librería de íconos Remixicon desde un CDN. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Enlaza la hoja de estilos de Bootstrap para usar sus componentes. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Enlaza la librería de íconos Font Awesome. -->
+
+    <!-- Google tag (gtag.js) para Google Analytics. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9REDB493L"></script> <!-- Carga el script de Google Analytics de forma asíncrona. -->
+    <script> <!-- Bloque de script para configurar Google Analytics. -->
+        window.dataLayer = window.dataLayer || []; // Inicializa la capa de datos si no existe.
+        function gtag() { dataLayer.push(arguments); } // Función para enviar eventos a Google Analytics.
+        gtag('js', new Date()); // Registra una nueva vista de página.
+
+        gtag('config', 'G-D9REDB493L'); // Configura Google Analytics con tu ID de seguimiento.
+    </script> <!-- Fin del script de Google Analytics. -->
+
+</head> <!-- Cierre de la sección de metadatos. -->
+<body> <!-- Contiene todo el contenido visible de la página web. -->
+    
+
+    <header> <!-- Define la sección de la cabecera de la página. -->
+        <nav class="navbar"> <!-- Barra de navegación, estilizada con la clase 'navbar'. -->
+            <div class="container-fluid"> <!-- Contenedor de Bootstrap que ocupa todo el ancho. -->
+                <div class="d-flex align-items-center"> <!-- Contenedor flexible para alinear el logo y el título. -->
+                    <button class="navbar-toggler" type="button" id="menu-toggle"> <!-- Botón para mostrar/ocultar el menú en dispositivos móviles (menú hamburguesa). -->
+                        &#9776; <!-- Entidad HTML para el ícono de hamburguesa (☰). -->
+                    </button> <!-- Cierre del botón del menú. -->
+                    <a class="logo ms-2" style="text-decoration: none;"> <!-- Enlace para el logo, con estilos en línea para quitar el subrayado. -->
+                        <img src="https://res.cloudinary.com/dalxsbtuo/image/upload/v1758648715/622b775b-33b4-4282-888a-75622238edda_rpqric.png" alt="Logo Hulux" style="height: 40px;"> <!-- Imagen del logo de la empresa. -->
+                    </a> <!-- Cierre del enlace del logo. -->
+                    <div class="logo ms-2"><h3>Control de Mantenimiento y Ciberseguridad Hulux</h3></div> <!-- Título de la aplicación junto al logo. -->
+                </div> <!-- Cierre del contenedor flexible. -->
+                <ul class="nav-links" id="nav-links"> <!-- Lista de enlaces de navegación. -->
+                    <li><a href="index.html">Inicio</a></li> <!-- Enlace a la página de inicio. -->
+                    <li><a href="control_de_mantenimiento.html" class="active">Control de Mantenimiento</a></li> <!-- Enlace a esta misma página, marcado como activo. -->
+                    <li><a href="dashboard.html">Dashboard</a></li> <!-- Enlace al dashboard de estadísticas. -->
+                    <li><a href="login.html" id="logout-button">Cerrar Sesión</a></li> <!-- Enlace para cerrar sesión. -->
+                </ul> <!-- Cierre de la lista de enlaces. -->
+            </div> <!-- Cierre del contenedor de la barra de navegación. -->
+        </nav> <!-- Cierre de la barra de navegación. -->
+    </header> <!-- Cierre de la cabecera. -->
+
+    <script> <!-- Bloque de script para la funcionalidad del menú hamburguesa. -->
+        // JavaScript para abrir/cerrar el menú hamburguesa.
+        document.getElementById("menu-toggle").onclick = function () { // Asigna un evento de clic al botón del menú.
+            document.getElementById("nav-links").classList.toggle("open"); // Añade o quita la clase 'open' a la lista de enlaces para mostrarla u ocultarla.
+        };
+    </script> <!-- Fin del script del menú. -->
+
+    <main class="container mt-4"> <!-- Contenido principal de la página, con un contenedor de Bootstrap y margen superior. -->
+        <!-- Formulario para registrar el mantenimiento de equipos. Su ID 'equipmentForm' es usado por JavaScript. -->
+        <form id="equipmentForm">
+            <input type="text" id="Nombre_de_Tecnico" placeholder="Nombre de Técnico" required> <!-- Campo para el nombre del técnico, es obligatorio. -->
+            <!-- Etiqueta para el selector de nombre de equipo, mejora la accesibilidad. -->
+            <label for="Nombre_del_Equipo">Nombre del Equipo</label>
+            <select id="Nombre_del_Equipo" required> <!-- Selector desplegable para el nombre del equipo, es obligatorio. -->
+                <option value="" disabled selected>Seleccione el equipo</option> <!-- Opción por defecto, deshabilitada y seleccionada. -->
+                <option value="Laptop">Laptop</option> <!-- Opción para Laptop. -->
+                <option value="Impresora">Impresora</option> <!-- Opción para Impresora. -->
+                <option value="Computadora">Computadora</option> <!-- Opción para Computadora. -->
+                <option value="Teclado">Teclado</option> <!-- Opción para Teclado. -->
+                <option value="Probador de fibra óptica OTDR">Probador de fibra óptica OTDR</option> <!-- Opción para OTDR. -->
+                <option value="Arista">Arista</option> <!-- Opción para Arista. -->
+            </select> <!-- Cierre del selector de equipo. -->
+            <input type="text" id="Número_de_Serie" placeholder="Número de Serie" required> <!-- Campo para el número de serie, es obligatorio. -->
+            <input type="date" id="Fecha_de_Mantenimiento" placeholder="Fecha de Mantenimiento" required> <!-- Campo para la fecha de mantenimiento, es obligatorio. -->
+            <!-- Etiqueta para el selector de tipo de mantenimiento. -->
+            <label for="Tipo_de_Mantenimiento">Tipo de Mantenimiento</label>
+            <select id="Tipo_de_Mantenimiento" required> <!-- Selector para el tipo de mantenimiento, es obligatorio. -->
+                <option value="" disabled selected>Seleccione el tipo de mantenimiento</option> <!-- Opción por defecto. -->
+                <option value="Preventivo">Preventivo</option> <!-- Opción para Mantenimiento Preventivo. -->
+                <option value="Correctivo">Correctivo</option> <!-- Opción para Mantenimiento Correctivo. -->
+                <option value="Predictivo y Correctivo">Predictivo y Correctivo</option> <!-- Opción para Mantenimiento Predictivo y Correctivo. -->
+            </select> <!-- Cierre del selector de tipo de mantenimiento. -->
+            <button type="submit" class="w-100">Registrar Mantenimiento</button> <!-- Botón para enviar el formulario, ocupa el 100% del ancho. -->
+        </form> <!-- Cierre del formulario. -->
+    
+        <!-- Tabla para mostrar el historial de mantenimiento registrado. -->
+        <div class="table-responsive mt-5"> <!-- Contenedor que hace la tabla responsiva en pantallas pequeñas. -->
+            <div class="d-flex justify-content-end">
+                <button id="delete-all-button" class="btn btn-danger mb-3">Eliminar Todos los Registros</button>
+            </div>
+            <table id="maintenanceTable" class="table"> <!-- Tabla con ID para ser manipulada por JS y clase de Bootstrap. -->
+                <thead> <!-- Cabecera de la tabla. -->
+                    <tr> <!-- Fila de la cabecera. -->
+                        <th>Nombre de Técnico</th> <!-- Columna para el nombre del técnico. -->
+                        <th>Nombre del Equipo</th> <!-- Columna para el nombre del equipo. -->
+                        <th>N° de Serie</th> <!-- Columna para el número de serie. -->
+                        <th>Fecha de Mantenimiento</th> <!-- Columna para la fecha. -->
+                        <th>Tipo de Mantenimiento</th> <!-- Columna para el tipo de mantenimiento. -->
+                        <th>Acciones</th> <!-- Columna para botones de acción (ej. eliminar). -->
+                    </tr> <!-- Cierre de la fila de cabecera. -->
+                </thead> <!-- Cierre de la cabecera. -->
+                <tbody> <!-- Cuerpo de la tabla donde se insertarán los datos. -->
+                    <!-- Las filas de la tabla se agregarán aquí dinámicamente desde JavaScript. -->
+                </tbody> <!-- Cierre del cuerpo de la tabla. -->
+            </table> <!-- Cierre de la tabla. -->
+        </div> <!-- Cierre del contenedor de la tabla. -->
+    </main> <!-- Cierre del contenido principal. -->
+
+
+    <!-- Pie de página -->
+    <footer> <!-- Define la sección del pie de página. -->
+        <p>2025 Control de Mantenimiento Hulux.</p> <!-- Párrafo con información de copyright. -->
+    </footer> <!-- Cierre del pie de página. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> <!-- Enlaza el script de Bootstrap (incluye Popper.js). -->
+    <script type="module" src="script.js"></script> <!-- Enlaza el script principal como un módulo JavaScript. -->
+    <script type="module" src="auth.js"></script> <!-- Enlaza el script de autenticación como un módulo JavaScript. -->
+</body> <!-- Cierre del cuerpo de la página. -->
+</html> <!-- Cierre del documento HTML. -->
