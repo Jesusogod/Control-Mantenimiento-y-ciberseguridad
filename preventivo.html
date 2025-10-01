@@ -1,0 +1,98 @@
+<!DOCTYPE html> <!-- Define el tipo de documento como HTML5. -->
+<html lang="es"> <!-- Inicia el documento HTML y establece el idioma a español. -->
+<head> <!-- Contenedor para metadatos, hojas de estilo y scripts. -->
+    <meta charset="UTF-8"> <!-- Especifica la codificación de caracteres como UTF-8 para soportar caracteres especiales. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para que sea responsiva en dispositivos móviles. -->
+    <title>Control de Mantenimiento</title> <!-- Establece el título que se muestra en la pestaña del navegador. -->
+    <link rel="stylesheet" href="styles.css"> <!-- Enlaza la hoja de estilos local para personalizar la apariencia. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"> <!-- Enlaza la librería de íconos Remixicon desde un CDN. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Enlaza la hoja de estilos de Bootstrap para usar sus componentes. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Enlaza la librería de íconos Font Awesome para usar sus íconos. -->
+
+    <!-- Google tag (gtag.js) para Google Analytics. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9REDB493L"></script> <!-- Carga el script de Google Analytics de forma asíncrona. -->
+    <script> <!-- Bloque de script para configurar Google Analytics. -->
+        window.dataLayer = window.dataLayer || []; // Inicializa la capa de datos si no existe.
+        function gtag() { dataLayer.push(arguments); } // Función para enviar eventos a Google Analytics.
+        gtag('js', new Date()); // Registra una nueva vista de página.
+
+        gtag('config', 'G-D9REDB493L'); // Configura Google Analytics con tu ID de seguimiento.
+    </script> <!-- Fin del script de Google Analytics. -->
+
+</head> <!-- Cierre de la sección de metadatos. -->
+<body> <!-- Contiene todo el contenido visible de la página web. -->
+    
+
+    <header> <!-- Define la sección de la cabecera de la página. -->
+        <nav class="navbar"> <!-- Barra de navegación, estilizada con la clase 'navbar'. -->
+            <div class="container-fluid"> <!-- Contenedor de Bootstrap que ocupa todo el ancho. -->
+                <div class="d-flex align-items-center"> <!-- Contenedor flexible para alinear el logo y el título. -->
+                    <button class="navbar-toggler" type="button" id="menu-toggle"> <!-- Botón para mostrar/ocultar el menú en dispositivos móviles (menú hamburguesa). -->
+                        &#9776; <!-- Entidad HTML para el ícono de hamburguesa (☰). -->
+                    </button> <!-- Cierre del botón del menú. -->
+                    <a class="logo ms-2" style="text-decoration: none;"> <!-- Enlace para el logo, con estilos en línea para quitar el subrayado. -->
+                        <img src="https://res.cloudinary.com/dalxsbtuo/image/upload/v1758648715/622b775b-33b4-4282-888a-75622238edda_rpqric.png" alt="Logo Hulux" style="height: 40px;"> <!-- Imagen del logo de la empresa. -->
+                    </a> <!-- Cierre del enlace del logo. -->
+                    <div class="logo ms-2"><h3>Control de Mantenimiento y Ciberseguridad Hulux</h3></div> <!-- Título de la aplicación junto al logo. -->
+                </div> <!-- Cierre del contenedor flexible. -->
+                <ul class="nav-links" id="nav-links"> <!-- Lista de enlaces de navegación. -->
+                    <li><a href="index.html" class="active">Inicio</a></li> <!-- Enlace a la página de inicio, marcado como activo. -->
+                    <li><a href="control_de_mantenimiento.html">Control de Mantenimiento</a></li> <!-- Enlace a la página de control. -->
+                    <li><a href="dashboard.html">Dashboard</a></li> <!-- Enlace al dashboard de estadísticas. -->
+                   <li><a href="login.html" id="logout-button">Cerrar Sesión</a></li> <!-- Enlace para cerrar sesión. -->
+                </ul> <!-- Cierre de la lista de enlaces. -->
+            </div> <!-- Cierre del contenedor de la barra de navegación. -->
+        </nav> <!-- Cierre de la barra de navegación. -->
+    </header> <!-- Cierre de la cabecera. -->
+
+    <script> <!-- Bloque de script para la funcionalidad del menú hamburguesa. -->
+        // JavaScript para abrir/cerrar el menú hamburguesa.
+        document.getElementById("menu-toggle").onclick = function () { // Asigna un evento de clic al botón del menú.
+            document.getElementById("nav-links").classList.toggle("open"); // Añade o quita la clase 'open' a la lista de enlaces para mostrarla u ocultarla.
+        };
+    </script> <!-- Fin del script del menú. -->
+
+    <main class="container mt-5"> <!-- Contenido principal de la página, con un contenedor de Bootstrap y margen superior. -->
+        <div class="row align-items-center"> <!-- Fila de Bootstrap que alinea verticalmente sus columnas. -->
+            <div class="col-md-6"> <!-- Columna que ocupa la mitad del ancho en pantallas medianas o más grandes. -->
+                <img src="https://res.cloudinary.com/dalxsbtuo/image/upload/v1758296987/Mantenimiento-Preventivo-Correctivo_bzflri.webp" class="img-fluid rounded shadow-sm" alt="Mantenimiento Preventivo"> <!-- Imagen ilustrativa, responsiva, con bordes redondeados y sombra. -->
+            </div> <!-- Cierre de la columna de la imagen. -->
+            <div class="col-md-6 text-background"> <!-- Columna para el texto, con una clase para aplicar un fondo. -->
+                <h1 class="mb-3">Mantenimiento Preventivo</h1> <!-- Título principal de la página. -->
+                <p class="lead">El mantenimiento preventivo consiste en una serie de revisiones y acciones periódicas que se realizan en los equipos de cómputo para minimizar la probabilidad de fallos y asegurar su óptimo rendimiento.</p> <!-- Párrafo introductorio con estilo destacado. -->
+                <p>Realizarlo de forma regular no solo alarga la vida útil de tus dispositivos, sino que también previene la pérdida de datos y costosas reparaciones.</p> <!-- Párrafo de texto normal. -->
+            </div> <!-- Cierre de la columna de texto. -->
+        </div> <!-- Cierre de la primera fila. -->
+
+        <div class="mt-5 text-background"> <!-- Contenedor con margen superior y fondo para la sección de beneficios. -->
+            <h2 class="mb-4 text-center">Beneficios y Tareas Clave</h2> <!-- Subtítulo de la sección. -->
+            <div class="row"> <!-- Fila de Bootstrap para organizar el contenido. -->
+                <div class="col-md-12"> <!-- Columna que ocupa todo el ancho. -->
+                    <p>Las tareas de mantenimiento preventivo incluyen tanto la revisión del hardware como la optimización del software. Algunas de las acciones más importantes son:</p> <!-- Párrafo introductorio a la lista. -->
+                    <ul class="list-group list-group-flush"> <!-- Lista de Bootstrap sin bordes laterales. -->
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i><strong>Limpieza interna y externa:</strong> Eliminación de polvo y suciedad de componentes como ventiladores, teclados y carcasas para evitar sobrecalentamiento.</li> <!-- Elemento de la lista con ícono y texto. -->
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i><strong>Actualización de software:</strong> Instalar las últimas versiones del sistema operativo, antivirus y aplicaciones para corregir vulnerabilidades de seguridad.</li> <!-- Elemento de la lista con ícono y texto. -->
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i><strong>Optimización del disco:</strong> Desfragmentar discos duros (HDD) y revisar el estado de unidades de estado sólido (SSD) para mejorar la velocidad de acceso a los datos.</li> <!-- Elemento de la lista con ícono y texto. -->
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i><strong>Revisión de periféricos:</strong> Asegurar el correcto funcionamiento de mouse, teclado, monitor y otros dispositivos conectados.</li> <!-- Elemento de la lista con ícono y texto. -->
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i><strong>Respaldo de información:</strong> Realizar copias de seguridad periódicas de los datos importantes para prevenir su pérdida ante cualquier fallo.</li> <!-- Elemento de la lista con ícono y texto. -->
+                    </ul> <!-- Cierre de la lista. -->
+                </div> <!-- Cierre de la columna. -->
+            </div> <!-- Cierre de la fila. -->
+        </div> <!-- Cierre del contenedor de beneficios. -->
+
+        <div class="text-center mt-5"> <!-- Contenedor centrado con margen superior para el botón de volver. -->
+            <a href="index.html" class="btn w-20">← Volver</a> <!-- Botón que enlaza a la página de inicio. -->
+        </div> <!-- Cierre del contenedor del botón. -->
+
+    </main> <!-- Cierre del contenido principal. -->
+
+    <!-- Pie de página -->
+    <footer> <!-- Define la sección del pie de página. -->
+        <p>2025 Control de Mantenimiento Hulux.</p> <!-- Párrafo con información de copyright. -->
+    </footer> <!-- Cierre del pie de página. -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> <!-- Enlaza el script de Bootstrap (incluye Popper.js). -->
+    <script type="module" src="script.js"></script> <!-- Enlaza el script principal como un módulo JavaScript. -->
+    <script type="module" src="auth.js"></script> <!-- Enlaza el script de autenticación como un módulo JavaScript. -->
+</body> <!-- Cierre del cuerpo de la página. -->
+</html> <!-- Cierre del documento HTML. -->
